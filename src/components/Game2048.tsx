@@ -96,7 +96,7 @@ const moveTiles = useCallback(
             scoreIncrease += newGrid[newI][newJ].value
             moved = true
             // @ts-ignore: Object is possibly 'null'
-            if (newGrid[newI][newJ].value === 2048 && !isWon) {
+            if (newGrid[newI][newJ].value === 128 && !isWon) {
               setIsWon(true)
             }
             break
