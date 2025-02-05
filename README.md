@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **2048**
 
-## Getting Started
+Welcome to the 2048 game project! This is a web-based implementation of the popular 2048 puzzle game, built using **Next.js** and **React** with **TypeScript**. The game allows players to combine tiles to reach the 2048 tile by sliding tiles in four directions.
 
-First, run the development server:
+## **Project Overview**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The project is structured as follows:
+
+```
+└── rsayyed591-2048/
+    ├── README.md
+    ├── components.json
+    ├── eslint.config.mjs
+    ├── next.config.ts
+    ├── package.json
+    ├── postcss.config.mjs
+    ├── tailwind.config.ts
+    ├── tsconfig.json
+    ├── public/
+    └── src/
+        ├── app/
+        │   ├── globals.css
+        │   ├── layout.tsx
+        │   └── page.tsx
+        ├── components/
+        │   ├── Game2048.tsx
+        │   └── ui/
+        │       ├── button.tsx
+        │       ├── card.tsx
+        │       ├── toast.tsx
+        │       └── toaster.tsx
+        ├── hooks/
+        │   └── use-toast.ts
+        └── lib/
+            └── utils.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Features**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Game Mechanics**: 
+  - Slide tiles to combine matching numbers and reach the 2048 tile.
+  - Score tracking with tile merging.
+  - Touch and keyboard support for controlling the game.
+  
+- **Technologies Used**:
+  - **Next.js** (React framework)
+  - **Tailwind CSS** (For styling)
+  - **TypeScript** (For type safety)
+  - **Framer Motion** (For animations)
+  - **React-Confetti** (For confetti effect when the game is won)
+  
+## **Installation**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To get started with the project, follow these steps:
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/rsayyed591/2048.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Navigate to the project folder:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   cd rsayyed591-2048
+   ```
 
-## Deploy on Vercel
+3. **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   If you're using npm:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+   Or, if you're using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Or, with yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+5. **Open your browser** and visit `http://localhost:3000`.
+
+## **Screenshots**
+
+![2048 Game Screenshot(Desktop)](./public/image1.png)
+![2048 Game Screenshot(Mobile)](./public/image.png)
+
+*Example screenshot of the game interface.*
+
+## **Demo**
+
+You can try the live demo of the game here:  
+[2048 Game Demo](https://gameof2048.vercel.app/)
+
+## **Key Components**
+
+1. **Game2048.tsx**:
+   - The main game logic and grid rendering.
+   - Handles tile movement, merging, and score updates.
+
+2. **Button.tsx**:
+   - A reusable button component used throughout the application, including for restarting the game.
+
+3. **Card.tsx**:
+   - A reusable card component used to display various UI elements, such as the score and game-over message.
+
+4. **use-toast.ts**:
+   - A custom hook for managing toast notifications.
+
+5. **utils.ts**:
+   - Utility functions to handle common tasks (e.g., generating random tiles).
+
+## **Project Structure**
+
+- `src/app/`: Contains the main app layout and pages.
+- `src/components/`: Contains the core game components and UI elements.
+- `src/hooks/`: Custom React hooks for state management and other reusable logic.
+- `src/lib/`: Utility functions and helpers.
+
+## **How to Contribute**
+
+If you find any issues or want to improve the project, feel free to fork this repository and submit a pull request. Contributions are always welcome!
+
+---
+
+## **About the Developer**
+
+This project is developed by **Rehan Feroz Sayyed**. Rehan is a computer engineering student from Mumbai, India, currently working on improving their web development skills, including proficiency in React, Next.js, TypeScript, and Tailwind CSS.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
